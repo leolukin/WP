@@ -6,6 +6,6 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
 1. Заходим под root
 
-    $ ssh root@ip
+       $ ssh root@ip
     
     
