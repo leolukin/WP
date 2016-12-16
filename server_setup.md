@@ -31,3 +31,14 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
         $ sudo apt-get update
         $ sudo apt-get install nginx
+
+2. Проверить работоспособность Nginx в браузере по адресу http://ip
+
+   Если на сервере был прежде запущен Apache2
+
+        $ service apache2 status 
+        $ service nginx status 
+        $ sudo service apache2 stop
+        $ service apache2 status 
+        $ sudo service nginx start
+        $ service nginx status 
