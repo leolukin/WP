@@ -20,6 +20,10 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 1. Добавление пользователя в группу sudo
 
         $ gpasswd -a username sudo
+        
+1. Выход и вход от нового пользователя
+
+        $ ssh username@ip
 
 ## Установка и настройка Nginx
 
