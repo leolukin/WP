@@ -11,3 +11,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 1. Создаем нового пользователя
 
        $ adduser username
+       
+1. Добавление пользователя в группу sudo
+
+       $ gpasswd -a username sudo
