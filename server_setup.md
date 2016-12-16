@@ -53,4 +53,4 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
 ## Установка PHP (поддержки PHP в Nginx)
 
-        $ sudo apt-get install php5-fpm php5-mysql
+        $ sudo apt-get install php7-fpm php7-mysql
