@@ -63,6 +63,12 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
         
         $ sudo nano /etc/php/7.1/fpm/php.ini
         $ sudo service php7.1-fpm restart
+        
+1. Создание папки проекта
+
+        $ mkdir /home/username/www
+        $ mkdir /home/username/www/domain.tld
+        $ mkdir /home/username/www/domain.tld/html
 
 1. Редактирование параметров основного сайта в Nginx и связка его с PHP
 
