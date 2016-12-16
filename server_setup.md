@@ -25,9 +25,9 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
         $ ssh username@ip
 
-## Установка и настройка Nginx
+## Установка Nginx
 
-1. Установка и настройка Nginx
+1. Установка и запуск Nginx
 
         $ sudo apt-get update
         $ sudo apt-get install nginx
@@ -42,3 +42,9 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
         $ service apache2 status 
         $ sudo service nginx start
         $ service nginx status 
+        
+## Установка MySQL
+
+1. Установка пакетов
+
+        $ sudo apt-get install mysql-server 
