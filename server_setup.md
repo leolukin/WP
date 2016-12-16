@@ -53,4 +53,16 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
 ## Установка PHP (поддержки PHP в Nginx)
 
-        $ sudo apt-get install php7-fpm php7-mysql
+1. Установка последней версии PHP
+
+        $ sudo apt-add-repository ppa:ondrej/php
+        $ sudo apt-get update
+        $ sudo apt-get install php7.1 php7.1-fpm php7.1-mysql -y
+
+1. Фикс безопасности: "What we are looking for in this file is the parameter that sets cgi.fix_pathinfo. This will be commented out with a semi-colon (;) and set to "1" by default."        
+        
+        $ sudo nano /etc/php/7.1/fpm/php.ini
+        $ sudo service php7.1-fpm restart
+
+        
+        
