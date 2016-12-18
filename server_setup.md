@@ -123,3 +123,17 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
     
         <?php
         phpinfo();
+        
+## Создание MySQL пользователя и базы данных
+
+1. Вход в MySQL
+
+        $ mysql -u root -p
+        
+1. Создание базы данных для пользователя
+
+        $ CREATE DATABASE username;
+        
+1. Задание прав для пользователя для базы
+
+        $ GRANT ALL PRIVILEGES ON username.* TO username@localhost;
