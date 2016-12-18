@@ -179,3 +179,9 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 1. Дать права на папку сайта группе пользователя www-data (от этого пользователя работает Nginx)
 
         $ sudo chown -R elvidigitalru:www-data /home/username/www/domain.tld/html/*
+
+
+### Перезагрузка Nginx и приложения после изменения конфигурации
+
+        $ sudo service nginx restart
+        $ sudo service php7.1-fpm restart
