@@ -72,7 +72,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
 1. Редактирование параметров основного сайта в Nginx и связка его с PHP
 
-        $ sudo vim /etc/nginx/sites-available/default
+        $ sudo vim /etc/nginx/sites-enabled/domain.tld
 
     Содержимое файла
 
@@ -80,13 +80,13 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
                 listen 80 default_server;
                 listen [::]:80 default_server ipv6only=on;
 
-                root /usr/share/nginx/html;
+                root /home/username/www/domain.tld/html;
                 index index.php index.html index.htm;
 
-                server_name server_domain_name_or_IP;
+                server_name www.domain.tld domain.tld;
     
-                if ($host != 'elvidigital.ru') {
-                        rewrite ^/(.*)$ http://elvidigital.ru/$1 permanent;
+                if ($host != 'domain.tld') {
+                        rewrite ^/(.*)$ http://domain.tld/$1 permanent;
                 }
 
 
@@ -111,8 +111,9 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
            }
 
 
-1. Перезапуск Nginx
+1. Удаление дефолтного сервера Nginx и его перезапуск:
 
+        $ sudo rm /etc/nginx/sites-enabled/default
         $ sudo service nginx restart
 
         
