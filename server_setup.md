@@ -136,7 +136,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
         
 1. Создание пользователя
 
-        $ 
+        $ CREATE USER username@localhost IDENTIFIED BY 'password';
         
 1. Задание прав для пользователя для базы
 
@@ -183,6 +183,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 1. Дать права на папку сайта группе пользователя www-data (от этого пользователя работает Nginx)
 
         $ sudo chown -R elvidigitalru:www-data /home/username/www/domain.tld/html/*
+        
+1. Продолжить установку через web-интерфейс http://domain.tld/
 
 
 ### Перезагрузка Nginx и приложения после изменения конфигурации
