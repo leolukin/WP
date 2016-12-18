@@ -147,4 +147,11 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
         $ cd ~
         $ wget http://wordpress.org/latest.tar.gz
         
+1. Разархивировать Wordpress
+
+        $ tar xzvf latest.tar.gz
         
+1. Установить зависимости
+
+        $ sudo apt-get update
+        $ sudo apt-get install php5-gd libssh2-php
