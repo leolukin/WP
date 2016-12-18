@@ -137,3 +137,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 1. Задание прав для пользователя для базы
 
         $ GRANT ALL PRIVILEGES ON username.* TO username@localhost;
+        $ FLUSH PRIVILEGES;
+        $ exit;
+        
+        
