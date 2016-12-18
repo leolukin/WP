@@ -90,7 +90,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
             }
 
             location / {
-                try_files $uri $uri/ =404;
+                try_files $uri $uri/ /index.php?q=$uri&$args;
             }
         
             error_page 404 /404.html;
