@@ -167,3 +167,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
         define('DB_NAME', '...');
         define('DB_USER', '...');
         define('DB_PASSWORD', '...');
+
+1. Копирование сайта в корневую папку
+
+        $ rsync -avP ~/wordpress/ /home/username/www/domain.tld/html
