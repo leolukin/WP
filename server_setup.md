@@ -155,3 +155,15 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
         $ sudo apt-get update
         $ sudo apt-get install php5-gd libssh2-php
+        
+1. Настройка конфигурации
+
+        $ cd wordpress
+        $ cp wp-config-sample.php wp-config.php
+        $ vim wp-config.php
+        
+1. Задать параметры подключения к DB
+
+        define('DB_NAME', '...');
+        define('DB_USER', '...');
+        define('DB_PASSWORD', '...');
