@@ -134,6 +134,10 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
         $ CREATE DATABASE username;
         
+1. Создание пользователя
+
+        $ 
+        
 1. Задание прав для пользователя для базы
 
         $ GRANT ALL PRIVILEGES ON username.* TO username@localhost;
