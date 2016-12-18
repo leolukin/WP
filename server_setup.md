@@ -77,39 +77,38 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
     Содержимое файла
 
         server {
-                listen 80 default_server;
-                listen [::]:80 default_server ipv6only=on;
+            listen 80 default_server;
+            listen [::]:80 default_server ipv6only=on;
 
+            root /home/username/www/domain.tld/html;
+            index index.php index.html index.htm;
+            
+            server_name www.domain.tld domain.tld;
+
+            if ($host != 'domain.tld') {
+                rewrite ^/(.*)$ http://domain.tld/$1 permanent;
+            }
+
+            location / {
+                try_files $uri $uri/ =404;
+            }
+        
+            error_page 404 /404.html;
+            error_page 500 502 503 504 /50x.html;
+            location = /50x.html {
                 root /home/username/www/domain.tld/html;
-                index index.php index.html index.htm;
+            }
 
-                server_name www.domain.tld domain.tld;
-    
-                if ($host != 'domain.tld') {
-                        rewrite ^/(.*)$ http://domain.tld/$1 permanent;
-                }
+            location ~ \.php$ {
+                try_files $uri =404;
+                fastcgi_split_path_info ^(.+\.php)(/.+)$;
+                fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
+                fastcgi_index index.php;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                include fastcgi_params;
+            }
 
-
-                location / {
-                        try_files $uri $uri/ =404;
-                }
-
-                error_page 404 /404.html;
-                error_page 500 502 503 504 /50x.html;
-                location = /50x.html {
-                        root /usr/share/nginx/html;
-                }
-
-                location ~ \.php$ {
-                        try_files $uri =404;
-                        fastcgi_split_path_info ^(.+\.php)(/.+)$;
-                        fastcgi_pass unix:/var/run/php5-fpm.sock;
-                        fastcgi_index index.php;
-                        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-                        include fastcgi_params;
-                }
-           }
-
+        }
 
 1. Удаление дефолтного сервера Nginx и его перезапуск:
 
