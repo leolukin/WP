@@ -124,7 +124,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
         <?php
         phpinfo();
         
-## Создание MySQL пользователя и базы данных
+## Создание MySQL базы данных
 
 1. Вход в MySQL
 
@@ -139,5 +139,12 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
         $ GRANT ALL PRIVILEGES ON username.* TO username@localhost;
         $ FLUSH PRIVILEGES;
         $ exit;
+        
+## Установка и настройка Wordpress
+
+1. Переход в папку пользователя и скачивание последней версии WordPress
+
+        $ cd ~
+        $ wget http://wordpress.org/latest.tar.gz
         
         
