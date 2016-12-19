@@ -193,6 +193,11 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
         
 1. Продолжить установку через web-интерфейс http://domain.tld/
 
+1. После установки всех плагинов онлайн
+
+        $ sudo chmod -R 755 /home/leonid/sites/elvidigitalru/html/wp-content
+        $ sudo chmod -v 444 /home/leonid/sites/elvidigitalru/html/wp-config.php
+
 
 ### Перезагрузка Nginx и приложения после изменения конфигурации
 
