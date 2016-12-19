@@ -166,11 +166,13 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
         $ cp wp-config-sample.php wp-config.php
         $ vim wp-config.php
         
-1. Задать параметры подключения к DB
+1. Задать параметры подключения к DB и разрешение к установке плагинов "на лету"
 
         define('DB_NAME', '...');
         define('DB_USER', '...');
         define('DB_PASSWORD', '...');
+        
+        define('FS_METHOD', 'direct');
 
 1. Копирование сайта в корневую папку
 
@@ -183,6 +185,11 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 1. Дать права на папку сайта группе пользователя www-data (от этого пользователя работает Nginx)
 
         $ sudo chown -R elvidigitalru:www-data /home/username/www/domain.tld/html/*
+        
+1. Задать разрешение на запись файлов папке wp-content
+
+        $ find /home/elvidigitalru/www/elvidigital.ru/html/wp-content -type d -exec chmod 775 {} \;
+        $ find /home/elvidigitalru/www/elvidigital.ru/html/wp-content -type f -exec chmod 664 {} \;
         
 1. Продолжить установку через web-интерфейс http://domain.tld/
 
