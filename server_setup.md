@@ -158,7 +158,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 1. Установить зависимости
 
         $ sudo apt-get update
-        $ sudo apt-get install php5-gd libssh2-php
+        $ sudo apt-get install php7.1-gd php-ssh2
         
 1. Настройка конфигурации
 
