@@ -195,8 +195,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
 1. После установки всех плагинов онлайн
 
-        $ sudo chmod -R 755 /home/elvidigitalru/sites/elvidigitalru/html/wp-content
-        $ sudo chmod -v 444 /home/elvidigitalru/sites/elvidigitalru/html/wp-config.php
+        $ sudo chmod -R 755 /home/elvidigitalru/www/elvidigital.ru/html/wp-content
+        $ sudo chmod -v 444 /home/elvidigitalru/www/elvidigital.ru/html/wp-config.php
 
 
 ### Перезагрузка Nginx и приложения после изменения конфигурации
