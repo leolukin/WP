@@ -6,7 +6,7 @@
 
 1. Переименовать по схеме:
 
-        certificate.txt -> your_domain_name.crt
-        key.txt -> your_domain_name.key
+        mv certificate.txt your_domain_name.crt
+        mv key.txt your_domain_name.key
 
 1. Скачать root.crt с сайта сертификационного центра
