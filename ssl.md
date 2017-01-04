@@ -20,3 +20,20 @@
 1. На сервере добавить промежуточный (корневой) сертификат к основному сертификату (под root)
 
         $ cat root.crt >> your_domain_name.crt
+  
+1. Открыть конфигурационный файл Nginx для сайта, сделать копию блока для HTTP соединения, вставить ниже и добавить в него:
+
+        server { 
+           listen 443; 
+
+           ssl on;
+           ssl_certificate /etc/ssl/your_domain_name.crt; (or .pem)
+           ssl_certificate_key /etc/ssl/your_domain_name.key; 
+ 
+        }
+          
+1. Проверить правильность установки сертификата - https://cryptoreport.rapidssl.com/checker/views/certCheck.jsp
+
+1. Сделать принудительный 301-й редирект со всех документов домена без HTTP на HTTPS
+
+
