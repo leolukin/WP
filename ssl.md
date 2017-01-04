@@ -40,6 +40,6 @@
 
 1. Сделать принудительный 301-й редирект со всех документов домена без HTTP на HTTPS (просто добавить в первый блок HTTP сервера после server_name):
 
-        return 301 https://your_domain_name.tld;
+        return 301 https://your_domain_name.tld$request_uri;
 
 
