@@ -31,7 +31,11 @@
            ssl_certificate_key /etc/ssl/certs/your_domain_name_tld/your_domain_name.key; 
  
         }
-          
+    
+1. Перезагрузить Nginx (под root) и потом проверить работу сайта по HTTPS
+
+        /etc/init.d/nginx restart
+    
 1. Проверить правильность установки сертификата - https://cryptoreport.rapidssl.com/checker/views/certCheck.jsp
 
 1. Сделать принудительный 301-й редирект со всех документов домена без HTTP на HTTPS
