@@ -38,6 +38,8 @@
     
 1. Проверить правильность установки сертификата - https://cryptoreport.rapidssl.com/checker/views/certCheck.jsp
 
-1. Сделать принудительный 301-й редирект со всех документов домена без HTTP на HTTPS
+1. Сделать принудительный 301-й редирект со всех документов домена без HTTP на HTTPS (просто добавить в первый блок HTTP сервера после server_name):
+
+        return 301 https://your_domain_name.tld;
 
 
