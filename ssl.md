@@ -19,4 +19,4 @@
 
 1. На сервере соединить сертификат с корневым сертификатом
 
-        $ cat root.crt >> your_domain_name.crt
+        $ sudo cat root.crt >> your_domain_name.crt
