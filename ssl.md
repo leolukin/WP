@@ -17,6 +17,6 @@
         scp /Users/leonidlukin/Sites/your_domain_name_tld/ssl/your_domain_name.key root@ip:/etc/ssl/certs/your_domain_name_tld
         scp /Users/leonidlukin/Sites/your_domain_name_tld/ssl/root.crt root@ip:/etc/ssl/certs/your_domain_name_tld
 
-1. На сервере соединить сертификат с корневым сертификатом
+1. На сервере добавить промежуточный (корневой) сертификат к основному сертификату (под root)
 
-        $ sudo cat root.crt >> your_domain_name.crt
+        $ cat root.crt >> your_domain_name.crt
