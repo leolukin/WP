@@ -27,8 +27,8 @@
            listen 443; 
 
            ssl on;
-           ssl_certificate /etc/ssl/your_domain_name.crt; (or .pem)
-           ssl_certificate_key /etc/ssl/your_domain_name.key; 
+           ssl_certificate /etc/ssl/certs/your_domain_name_tld/your_domain_name.crt;
+           ssl_certificate_key /etc/ssl/certs/your_domain_name_tld/your_domain_name.key; 
  
         }
           
