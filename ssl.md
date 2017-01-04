@@ -9,7 +9,7 @@
         mv certificate.txt your_domain_name.crt
         mv key.txt your_domain_name.key
 
-1. Скачать root.crt с сайта сертификационного центра - https://knowledge.rapidssl.com/support/ssl-certificate-support/index?page=content&id=INFO1548
+1. Скачать root.crt с сайта сертификационного центра - https://knowledge.rapidssl.com/support/ssl-certificate-support/index?page=content&id=INFO1548 (нужно взять содержимое всех сертификатов и объединить в один текстовый файл root.crt)
 
 1. Перенести сертификаты на сервер (из под root)
 
