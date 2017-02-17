@@ -82,7 +82,6 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 1. Установка пакетов, задание пароля для root
 
         $ sudo apt-get install mysql-server 
-        $ sudo mysql_install_db
         $ sudo mysql_secure_installation
 
 ## Установка PHP (поддержки PHP в Nginx)
