@@ -63,14 +63,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
 ## Установка Nginx
 
-1. Установка и запуск Nginx
-
-        $ sudo apt-get update
-        $ sudo apt-get install nginx
-
-2. Проверить работоспособность Nginx в браузере по адресу http://ip
-
-   Если на сервере был прежде запущен Apache2
+1.    Если на сервере был прежде запущен Apache2
 
         $ service apache2 status 
         $ service nginx status 
@@ -78,6 +71,14 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
         $ service apache2 status 
         $ sudo service nginx start
         $ service nginx status 
+
+1. Установка и запуск Nginx
+
+        $ sudo apt-get update
+        $ sudo apt-get install nginx
+
+2. Проверить работоспособность Nginx в браузере по адресу http://ip
+
         
 ## Установка MySQL
 
