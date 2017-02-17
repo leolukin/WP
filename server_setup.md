@@ -65,15 +65,15 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
 1.    Если на сервере был прежде запущен Apache2
 
-        $ service apache2 status 
+        $ sudo service apache2 status 
         $ sudo service apache2 stop
-        $ service apache2 status  
+        $ sudo service apache2 status  
 
 1. Установка и запуск Nginx
 
         $ sudo apt-get update
         $ sudo apt-get install nginx
-	$ service nginx status 
+	$ sudo service nginx status 
 
 2. Проверить работоспособность Nginx в браузере по адресу http://ip
 
