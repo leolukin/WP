@@ -152,7 +152,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
 1. Создание тестового файла PHP (проверка в браузере http://domain.tld/domain-411.php)
 
-        $ vim /home/username/www/domain.tld/html/domain-411.php
+        $ vim /home/username/www/domain.tld/app/public/domain-411.php
 
     Содержимое файла:
     
