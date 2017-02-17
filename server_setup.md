@@ -10,6 +10,17 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 1. Заходим под root
 
         $ ssh root@ip
+	
+## Обновления
+    $ apt-get -y update
+    $ apt-get upgrade
+    $ apt-get install build-essential
+    $ apt-get -y install curl git-core python-software-properties
+
+## Установка временной зоны
+    $ dpkg-reconfigure tzdata
+    $ apt-get install ntp
+    $ ntpdate ntp.ubuntu.com
         
 ## Установка русской локали
 
@@ -34,17 +45,6 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
         $ export LANG=ru_RU.UTF-8
         $ export LC_ALL=ru_RU.UTF-8
-
-## Обновления
-    $ apt-get -y update
-    $ apt-get upgrade
-    $ apt-get install build-essential
-    $ apt-get -y install curl git-core python-software-properties
-
-## Установка временной зоны
-    $ dpkg-reconfigure tzdata
-    $ apt-get install ntp
-    $ ntpdate ntp.ubuntu.com
 
 
 ## Создание пользователя приложения
