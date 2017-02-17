@@ -102,7 +102,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
         $ mkdir /home/username/www
         $ mkdir /home/username/www/domain.tld
-        $ mkdir /home/username/www/domain.tld/html
+        $ mkdir /home/username/www/domain.tld/app
+        $ mkdir /home/username/www/domain.tld/app/public
 
 1. Задание параметров основного сайта в Nginx и связка его с PHP (новый файл)
 
@@ -114,7 +115,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
             listen 80 default_server;
             listen [::]:80 default_server ipv6only=on;
 
-            root /home/username/www/domain.tld/html;
+            root /home/username/www/domain.tld/app/public;
             index index.php index.html index.htm;
             
             server_name www.domain.tld domain.tld;
