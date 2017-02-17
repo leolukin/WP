@@ -93,7 +93,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
         $ sudo apt-get update
         $ sudo apt-get install php7.1 php7.1-fpm php7.1-mysql -y
 
-1. Фикс безопасности: "What we are looking for in this file is the parameter that sets cgi.fix_pathinfo. This will be commented out with a semi-colon (;) and set to "1" by default."        
+1. Фикс безопасности: "What we are looking for in this file is the parameter that sets cgi.fix_pathinfo. This will be commented out with a semi-colon (;) and set to "1" by default." и установка максимального размера памяти memory_limit (256MB для 2G памяти)      
         
         $ sudo vim /etc/php/7.1/fpm/php.ini
         $ sudo service php7.1-fpm restart
