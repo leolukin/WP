@@ -71,7 +71,6 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
 1. Установка и запуск Nginx
 
-        $ sudo apt-get update
         $ sudo apt-get install nginx
 	$ sudo service nginx status 
 
