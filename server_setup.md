@@ -7,11 +7,47 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
 # Настройка удаленного сервера
 
-## Создание пользователя приложения
-
 1. Заходим под root
 
         $ ssh root@ip
+        
+## Установка русской локали
+
+1. Загрузка пака
+
+        $ apt-get install language-pack-ru-base
+	
+2. В файл /var/lib/locales/supported.d/ru (vi /var/lib/locales/supported.d/ru, потом для выхода ESC -> :wq) добавляем (или проверяем наличие):
+
+        ru_RU.UTF-8 UTF-8
+	
+3. Генерируем локали
+
+        $ locale-gen
+
+4. В файл /etc/environment (vim /etc/environment, потом для выхода ESC -> :wq) добавляем:
+
+        LANG=ru_RU.UTF-8
+        LC_ALL=ru_RU.UTF-8
+	
+5. Устанавливаем локали без перезагрузки сервера:
+
+        $ export LANG=ru_RU.UTF-8
+        $ export LC_ALL=ru_RU.UTF-8
+
+## Обновления
+    $ apt-get -y update
+    $ apt-get upgrade
+    $ apt-get install build-essential
+    $ apt-get -y install curl git-core python-software-properties
+
+## Установка временной зоны
+    $ dpkg-reconfigure tzdata
+    $ apt-get install ntp
+    $ ntpdate ntp.ubuntu.com
+
+
+## Создание пользователя приложения
     
 1. Создаем нового пользователя
 
