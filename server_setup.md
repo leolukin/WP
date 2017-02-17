@@ -88,6 +88,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
 1. Установка последней версии PHP
 
+        $ sudo apt-get install software-properties-common
         $ sudo apt-add-repository ppa:ondrej/php
         $ sudo apt-get update
         $ sudo apt-get install php7.1 php7.1-fpm php7.1-mysql -y
