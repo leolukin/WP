@@ -20,6 +20,6 @@ https://ru.wordpress.org/plugins/all-in-one-wp-migration/
 
 ### Wordfence Security
 
-Полный комплекс защиты сайта.
+Полный комплекс защиты сайта. Антивирус, файервол, скан.
 
 https://ru.wordpress.org/plugins/wordfence/
