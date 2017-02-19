@@ -226,16 +226,19 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
         .DS_Store
         .idea
 
-1.   Добавить файлы проекта в локальный репозиторий 
+1. Добавить файлы проекта в локальный репозиторий 
 
-	$ git add .
-	$ git status
-	$ git commit -m "first commit"
+        $ git add .
+        $ git status
+        $ git commit -m "first commit"
 	
 1. Добавить удаленный репозиторий на GitHub и запушить туда код
 
-	$ git remote add origin git@github.com:githubusername/repositoryname.git
-	$ git push origin master	
+        $ git remote add origin git@github.com:githubusername/repositoryname.git
+        $ git push origin master	
+
+
+
 
 
 ## Вариант 2. Установка и настройка Wordpress (непосредственно на сервере)
