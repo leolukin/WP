@@ -23,3 +23,10 @@ https://ru.wordpress.org/plugins/all-in-one-wp-migration/
 Полный комплекс защиты сайта. Антивирус, файервол, скан.
 
 https://ru.wordpress.org/plugins/wordfence/
+
+
+## Разработка
+
+### Developer
+
+https://wordpress.org/plugins/developer/
