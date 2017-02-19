@@ -6,4 +6,4 @@
 
 Бэкап базы данных с возможностью восстановления. Можно выбирать какие таблицы бэкапить.
 
-(https://ru.wordpress.org/plugins/wp-db-backup/)[https://ru.wordpress.org/plugins/wp-db-backup/]
+https://ru.wordpress.org/plugins/wp-db-backup/
