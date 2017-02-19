@@ -202,7 +202,43 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
         $ chmod +x post-receive
 	
-## Установка и настройка Wordpress (если на сервере)
+	
+## Создание локального репозитория
+
+1. Создать репозиторий на ginhub
+
+1. Создать локальный депозиторий
+
+        $ git init
+	
+1. Создать .gitignore с содержимым
+
+        *.log
+        wp-content/backups/
+        wp-content/cache/
+        wp-content/upgrade/
+        wp-content/uploads/
+
+        ehthumbs.db
+        Thumbs.db
+        *.sublime-project
+        *.sublime-workspace
+        .DS_Store
+        .idea
+
+1.   Добавить файлы проекта в локальный репозиторий 
+
+	$ git add .
+	$ git status
+	$ git commit -m "first commit"
+	
+1. Добавить удаленный репозиторий на GitHub и запушить туда код
+
+	$ git remote add origin git@github.com:githubusername/repositoryname.git
+	$ git push origin master	
+
+
+## Вариант 2. Установка и настройка Wordpress (непосредственно на сервере)
 
 1. Переход в папку пользователя и скачивание последней версии WordPress
 
