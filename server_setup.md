@@ -237,9 +237,17 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
         $ git remote add origin git@github.com:githubusername/repositoryname.git
         $ git push origin master	
 
+1. Добавить удаленный репозиторий на production сервере
 
+        $ git remote add production ssh://leonidlukinru@62.76.178.217/home/leonidlukinru/repo/leonidlukinru.git
 
+1. Задеплоить на production сервер
 
+        $ git push production master
+	
+	
+	
+	
 
 ## Вариант 2. Установка и настройка Wordpress (непосредственно на сервере)
 
