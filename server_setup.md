@@ -179,7 +179,30 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
         $ FLUSH PRIVILEGES;
         $ exit;
         
-## Установка и настройка Wordpress
+## Создание удаленного репозитория на VPS
+
+1.  Создать репозиторий
+
+        $ cd /home/leonidlukinru/
+        $ mkdir repo && cd repo
+        $ mkdir leonidlukinru.git && cd leonidlukinru.git
+        $ git init --bare
+	
+1. Создать хук (автоматическое копирование файлов проекта в рабочую папку после выкладки в репозиторий и задание прав)
+
+        $ cd hooks
+        $ cat > post-receive
+
+        #!/bin/sh
+        git --work-tree=/home/leonidlukinru/www/leonidlukin.ru/app --git-dir=/home/leonidlukinru/repo/leonidlukinru.git checkout -f
+        find /home/leonidlukinru/www/leonidlukin.ru/app/public/ -type d -exec chmod 755 {} \;
+        find /home/leonidlukinru/www/leonidlukin.ru/app/public/ -type f -exec chmod 644 {} \;
+
+1. Сделать этот файл исполняемым
+
+        $ chmod +x post-receive
+	
+## Установка и настройка Wordpress (если на сервере)
 
 1. Переход в папку пользователя и скачивание последней версии WordPress
 
