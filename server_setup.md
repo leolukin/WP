@@ -1,10 +1,3 @@
-https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04
-
-https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04
-
-https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-nginx-on-ubuntu-14-04
-
-
 # Настройка удаленного сервера
 
 1. Заходим под root
@@ -308,3 +301,14 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-n
 
         $ sudo service nginx restart
         $ sudo service php7.1-fpm restart
+	
+	
+## Опорный материал
+
+https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04
+
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04
+
+https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-nginx-on-ubuntu-14-04
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps
