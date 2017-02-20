@@ -314,7 +314,29 @@
         $ sudo service nginx restart
         $ sudo service php7.1-fpm restart
 	
-	
+## Дополнительная настройка PHP-FPM для ВТРОГО+ сайтов на одном сервере
+
+1. Создать файл sudo vim /etc/php/7.1/fpm/pool.d/<название_сайта>.conf с содержимым
+
+        [<название_сайта>]
+        user = <название_сайта>
+        group = sudo
+        listen = /var/run/php/php7.1-fpm_<название_сайта>.sock
+        listen.owner = www-data
+        listen.group = www-data
+        php_admin_value[disable_functions] = exec,passthru,shell_exec,system
+        php_admin_flag[allow_url_fopen] = off
+        pm = dynamic
+        pm.max_children = 5
+        pm.start_servers = 2
+        pm.min_spare_servers = 1
+        pm.max_spare_servers = 3
+        chdir = /
+
+1. Затем перезапустить PHP-FPM
+
+        sudo service php7.1-fpm restart	
+
 ## Опорный материал
 
 https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-14-04
