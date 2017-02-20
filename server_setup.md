@@ -219,10 +219,10 @@
 1. Создать .gitignore с содержимым
 
         *.log
-        wp-content/backups/
-        wp-content/cache/
-        wp-content/upgrade/
-        wp-content/uploads/
+        public/wp-content/backups/
+        public/wp-content/cache/
+        public/wp-content/upgrade/
+        public/wp-content/uploads/
 
         ehthumbs.db
         Thumbs.db
