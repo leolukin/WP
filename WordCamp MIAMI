@@ -5,3 +5,9 @@
 sudo wpscan --url 
 
 https://wpscan.org
+
+1. Запретить выполнение файлов в папке /wp-content/uploads
+
+1. Protect wp-content completely!!! ???
+
+WP Mobile Detector
