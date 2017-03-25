@@ -4,6 +4,8 @@
 
 sudo wpscan --url domain.dev --enumerate vp --random-agent
 
+ruby wpscan.rb --url www.elvidigital.ru  --enumerate u,u[10-20],ap,tt,at --random-agent
+
 https://wpscan.org
 
 1. Запретить выполнение файлов в папке /wp-content/uploads
