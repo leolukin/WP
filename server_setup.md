@@ -305,8 +305,8 @@
 
 1. После установки всех плагинов онлайн
 
-        $ sudo chmod -R 755 /home/elvidigitalru/www/elvidigital.ru/html/wp-content
-        $ sudo chmod -v 444 /home/elvidigitalru/www/elvidigital.ru/html/wp-config.php
+        $ find /home/elvidigitalru/www/elvidigital.ru/html/wp-content -type d -exec chmod 755 {} \;
+        $ find /home/elvidigitalru/www/elvidigital.ru/html/wp-content -type f -exec chmod 644 {} \;
 
 
 ### Перезагрузка Nginx и приложения после изменения конфигурации
