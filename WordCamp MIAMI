@@ -14,7 +14,7 @@ https://wpscan.org
 
 1. Protect wp-admin
 
-1. Protect root
+1. Protect root (отключить xmlrpc, блокировать доступ к readme and license)
 
 
 WP Mobile Detector
