@@ -2,13 +2,19 @@
 
 ### WPScan
 
-sudo wpscan --url 
+sudo wpscan --url domain.dev --enumerate vp --random-agent
 
 https://wpscan.org
 
 1. Запретить выполнение файлов в папке /wp-content/uploads
 
 1. Protect wp-content completely!!! ???
+
+1. Protect wp-include
+
+1. Protect wp-admin
+
+1. Protect root
 
 
 WP Mobile Detector
