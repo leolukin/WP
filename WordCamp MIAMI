@@ -16,6 +16,8 @@ https://wpscan.org
 
 1. Protect root (отключить xmlrpc, блокировать доступ к readme and license)
 
+https://github.com/gilzow/access-denied/
+
 
 WP Mobile Detector
 https://srd.wordpress.org/plugins/wp-mobile-detect/
