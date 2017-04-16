@@ -30,3 +30,20 @@ https://ru.wordpress.org/plugins/wordfence/
 ### Developer
 
 https://wordpress.org/plugins/developer/
+
+## Социальные сети
+
+### Facebook
+
+Показывает фиды из FB на сайте и даже в качестве постов - (может даже показывать чужие по URL?)
+
+https://wordpress.org/plugins/add-facebook-feed/
+
+
+## Специальные
+
+### Essential Real Estate
+
+Для риэлтеров - может показывать объекты. Полностью базовый функционал.
+
+https://wordpress.org/plugins/essential-real-estate/
