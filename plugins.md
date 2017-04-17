@@ -47,3 +47,5 @@ https://wordpress.org/plugins/add-facebook-feed/
 Для риэлтеров - может показывать объекты. Полностью базовый функционал.
 
 https://wordpress.org/plugins/essential-real-estate/
+
+Тьютториал - https://www.youtube.com/playlist?list=PL_DzVbdOfv7EJSkMOf84gpYGzZqvrwv4H 
