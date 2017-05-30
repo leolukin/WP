@@ -295,6 +295,7 @@
 1. Дать права на папку сайта группе пользователя www-data (от этого пользователя работает Nginx)
 
         $ sudo chown -R elvidigitalru:www-data /home/username/www/domain.tld/html/*
+	$ sudo chown -R www-data:www-data /home/username/www/domain.tld/html/wp-content
         
 1. Задать разрешение на запись файлов папке wp-content
 
