@@ -298,17 +298,17 @@
         $ sudo chown -R elvidigitalru:www-data /home/username/www/domain.tld/html/*
 	$ sudo chown -R www-data:www-data /home/username/www/domain.tld/html/wp-content
         
-1. Задать разрешение на запись файлов папке wp-content
+1. Задать разрешение на запись файлов и папкам
+
+        $ find /home/elvidigitalru/www/elvidigital.ru/html -type d -exec chmod 755 {} \;
+        $ find /home/elvidigitalru/www/elvidigital.ru/html -type f -exec chmod 644 {} \;
+
+1. Задать разрешение на запись файлов и папкам в wp-content
 
         $ find /home/elvidigitalru/www/elvidigital.ru/html/wp-content -type d -exec chmod 775 {} \;
         $ find /home/elvidigitalru/www/elvidigital.ru/html/wp-content -type f -exec chmod 664 {} \;
-        
+
 1. Продолжить установку через web-интерфейс http://domain.tld/
-
-1. После установки всех плагинов онлайн
-
-        $ find /home/elvidigitalru/www/elvidigital.ru/html/wp-content -type d -exec chmod 755 {} \;
-        $ find /home/elvidigitalru/www/elvidigital.ru/html/wp-content -type f -exec chmod 644 {} \;
 
 
 ### Перезагрузка Nginx и приложения после изменения конфигурации
