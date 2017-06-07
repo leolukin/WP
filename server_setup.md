@@ -58,9 +58,10 @@
 
         $ adduser username
        
-1. Добавление пользователя в группу sudo
+1. Добавление пользователя в группу sudo и www-data
 
         $ gpasswd -a username sudo
+	$ adduser username www-data
         
 1. Выход и вход от нового пользователя
 
@@ -200,8 +201,8 @@
 
         #!/bin/sh
         git --work-tree=/home/leonidlukinru/www/leonidlukin.ru/app --git-dir=/home/leonidlukinru/repo/leonidlukinru.git checkout -f
-        find /home/leonidlukinru/www/leonidlukin.ru/app/public/ -type d -exec chmod 755 {} \;
-        find /home/leonidlukinru/www/leonidlukin.ru/app/public/ -type f -exec chmod 644 {} \;
+        find /home/leonidlukinru/www/leonidlukin.ru/app/public/wp-content -type d -exec chmod 775 {} \;
+        find /home/leonidlukinru/www/leonidlukin.ru/app/public/wp-content -type f -exec chmod 664 {} \;
 
 1. Сделать этот файл исполняемым
 
