@@ -194,7 +194,7 @@
         $ mkdir leonidlukinru.git && cd leonidlukinru.git
         $ git init --bare
 	
-1. Создать хук (автоматическое копирование файлов проекта в рабочую папку после выкладки в репозиторий и задание прав - после ввода текст - 'control-d' для сохранения)
+1. Создать хук (автоматическое копирование файлов проекта в рабочую папку после выкладки в репозиторий и задание прав - после ввода текст - 'control-d' для сохранения) - МЯГКИЙ ВАРИАНТ (автообновление плагинов на сайте)
 
         $ cd hooks
         $ cat > post-receive
@@ -203,6 +203,16 @@
         git --work-tree=/home/leonidlukinru/www/leonidlukin.ru/app --git-dir=/home/leonidlukinru/repo/leonidlukinru.git checkout -f
         find /home/leonidlukinru/www/leonidlukin.ru/app/public/wp-content -type d -exec chmod 775 {} \;
         find /home/leonidlukinru/www/leonidlukin.ru/app/public/wp-content -type f -exec chmod 664 {} \;
+	
+1. Создать хук (автоматическое копирование файлов проекта в рабочую папку после выкладки в репозиторий и задание прав - после ввода текст - 'control-d' для сохранения) - ЖЕСТКИЙ ВАРИАНТ (без обновления плагинов на сайте)
+
+        $ cd hooks
+        $ cat > post-receive
+
+        #!/bin/sh
+        git --work-tree=/home/leonidlukinru/www/leonidlukin.ru/app --git-dir=/home/leonidlukinru/repo/leonidlukinru.git checkout -f
+        find /home/leonidlukinru/www/leonidlukin.ru/app/public -type d -exec chmod 755 {} \;
+        find /home/leonidlukinru/www/leonidlukin.ru/app/public -type f -exec chmod 644 {} \;
 
 1. Сделать этот файл исполняемым
 
@@ -295,9 +305,14 @@
         
 1. Дать права на папку сайта группе пользователя www-data (от этого пользователя работает Nginx)
 
-        $ sudo chown -R elvidigitalru:www-data /home/username/www/domain.tld/html/*
+        $ sudo chown -R пользователь:www-data /home/username/www/domain.tld/html/*
 	$ sudo chown -R www-data:www-data /home/username/www/domain.tld/html/wp-content
-        
+  
+1. Или более жесткий вариант - дать права на папку только UPLOADS сайта группе пользователя www-data (от этого пользователя работает Nginx)
+
+        $ sudo chown -R пользователь:www-data /home/username/www/domain.tld/html/*
+	$ sudo chown -R www-data:www-data /home/username/www/domain.tld/html/wp-content/uploads  
+  
 1. Задать разрешение на запись файлов и папкам
 
         $ find /home/elvidigitalru/www/elvidigital.ru/html -type d -exec chmod 755 {} \;
@@ -307,6 +322,11 @@
 
         $ find /home/elvidigitalru/www/elvidigital.ru/html/wp-content -type d -exec chmod 775 {} \;
         $ find /home/elvidigitalru/www/elvidigital.ru/html/wp-content -type f -exec chmod 664 {} \;
+	
+1. ИЛИ БОЛЕЕ ЖЕСТКИЙ ВАРИАНТ - Задать разрешение на запись файлов в wp-content/uploads
+
+        $ find /home/elvidigitalru/www/elvidigital.ru/html/wp-content/uploads -type d -exec chmod 775 {} \;
+        $ find /home/elvidigitalru/www/elvidigital.ru/html/wp-content/uploads -type f -exec chmod 664 {} \;
 
 1. Продолжить установку через web-интерфейс http://domain.tld/
 
