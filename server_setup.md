@@ -320,8 +320,8 @@
 1. Создать файл sudo vim /etc/php/7.1/fpm/pool.d/<название_сайта>.conf с содержимым
 
         [<название_сайта>]
-        user = <название_сайта>
-        group = sudo
+        user = www-data
+        group = www-data
         listen = /var/run/php/php7.1-fpm_<название_сайта>.sock
         listen.owner = www-data
         listen.group = www-data
