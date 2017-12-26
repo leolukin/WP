@@ -62,6 +62,9 @@
 
         $ gpasswd -a username sudo
 	$ adduser username www-data
+	$ sudo visudo
+	
+	Добавить username ALL=(ALL:ALL) ALL
         
 1. Выход и вход от нового пользователя
 
